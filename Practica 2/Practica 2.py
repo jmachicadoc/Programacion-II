@@ -58,8 +58,8 @@ class Circulo:
         plt.show()
 
 #Salida Punto
-p1 = (1,2)
-p2 = (5,4)
+p1 = (0,0)
+p2 = (5,5)
 linea = Linea(p1,p2)
 print(linea)
 linea.dibujeLinea()
