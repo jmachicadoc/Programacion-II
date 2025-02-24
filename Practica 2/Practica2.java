@@ -45,7 +45,8 @@ public class Practica2 {
         public void paintComponent(Graphics g) {
             super.paintComponent(g);
             Graphics2D g2d = (Graphics2D) g;
-            g2d.drawLine((int) p1.x, (int) p1.y, (int) p2.x, (int) p2.y);
+            g2d.drawLine((int) p1.x + 50, (int) p1.y + 50, (int) p2.x + 50, (int) p2.y + 50);
+
         }
 
         public static void dibujaLinea(Punto p1, Punto p2) {
@@ -93,8 +94,8 @@ public class Practica2 {
 
     public static void main(String[] args) {
         // Crear puntos para los objetos
-        Punto p1 = new Punto(50, 50);
-        Punto p2 = new Punto(200, 200);
+        Punto p1 = new Punto(0, 0);
+        Punto p2 = new Punto(5, 5);
         Punto centro = new Punto(200, 200);
 
         // Crear y mostrar la linea
