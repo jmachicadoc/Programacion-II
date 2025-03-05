@@ -93,17 +93,14 @@ public class Practica2 {
     }
 
     public static void main(String[] args) {
-        // Crear puntos para los objetos
         Punto p1 = new Punto(0, 0);
         Punto p2 = new Punto(5, 5);
         Punto centro = new Punto(200, 200);
 
-        // Crear y mostrar la linea
         Linea linea = new Linea(p1, p2);
         System.out.println(linea.toString());
         Linea.dibujaLinea(p1, p2);
 
-        // Crear y mostrar el círculo
         Circulo circulo = new Circulo(centro, 150.0f);
         System.out.println(circulo.toString());
         Circulo.dibujaCirculo(centro, 150.0f);
