@@ -5,14 +5,14 @@ class Pila:
         self.top = -1  
 
     def push(self, e):
-        if self.is_full():
+        if self.isFull():
             print("Pila Llena")
         else:
             self.top += 1
             self.arreglo[self.top] = e
 
     def pop(self):
-        if self.is_empty():
+        if self.isEmpty():
             print("Pila Vacía")
             return None  
         else:
@@ -21,34 +21,46 @@ class Pila:
             return dato
 
     def peek(self):
-        if self.is_empty():
+        if self.isEmpty():
             print("Pila Vacía")
             return None  
         else:
             return self.arreglo[self.top]
 
-    def is_empty(self):
+    def isEmpty(self):
         return self.top == -1
 
-    def is_full(self):
+    def isFull(self):
         return self.top == self.n - 1
 
-    def mostrar_pila(self):
-        if self.is_empty():
-            print("Pila Vacía")
-        else:
-            print("Pila:", self.arreglo[:self.top + 1])
+#Ver si la PILA es par se va a B si es impar a C
+A = Pila(5)
 
-pila = Pila(5)
+A.push(13)
+A.push(22)
+A.push(7)
 
-pila.push(10)
-pila.push(20)
-pila.push(30)
-pila.mostrar_pila()
+B = Pila(5) # Pares
+C = Pila(5) # Impares
 
-print("Peek:", pila.peek())
-print("Pop:", pila.pop())
-pila.mostrar_pila()
+while not A.isEmpty():
+    e = A.pop()
+    if e % 2 == 0:
+        B.push(e)
+    else:
+        C.push(e)
 
-print("¿Está vacía?", pila.is_empty())
-print("¿Está llena?", pila.is_full())
+print("B...")
+while not B.isEmpty():
+    print(B.pop())
+
+print("C...")
+while not C.isEmpty():
+    print(C.pop())
+    
+
+#/print("Peek:", A.peek())
+#print("Pop:", A.pop())
+
+#print("¿Está vacía?", A.isEmpty())
+#print("¿Está llena?", A.isFull())

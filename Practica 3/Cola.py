@@ -7,7 +7,7 @@ class Cola:
         self.elementos = 0
 
     def insert(self, e):
-        if self.is_full():
+        if self.isFull():
             print("Cola Llena")
         else:
             self.fin = (self.fin + 1) % self.n  
@@ -15,7 +15,7 @@ class Cola:
             self.elementos += 1
 
     def remove(self):
-        if self.is_empty():
+        if self.isEmpty():
             print("Cola Vacía")
             return None  
         else:
@@ -25,38 +25,55 @@ class Cola:
             return dato
 
     def peek(self):
-        if self.is_empty():
+        if self.isEmpty():
             print("Cola Vacía")
             return None  
         else:
             return self.arreglo[self.inicio]
 
-    def is_empty(self):
+    def isEmpty(self):
         return self.elementos == 0
 
-    def is_full(self):
+    def isFull(self):
         return self.elementos == self.n
 
     def size(self):
         return self.elementos
 
-    def mostrar_cola(self):
-        if self.is_empty():
-            print("Cola Vacía")
-        else:
-            print("Cola:", [self.arreglo[(self.inicio + i) % self.n] for i in range(self.elementos)])
 
-cola = Cola(5)
+A = Cola(5)
+A.insert(22)
+A.insert(5)
+A.insert(10)
+A.insert(11)
 
-cola.insert(10)
-cola.insert(20)
-cola.insert(30)
-cola.mostrar_cola()
+B = Cola(5) # PRIMOS
+C = Cola(5) # NO PRIMOS 
 
-print("Peek:", cola.peek())
-print("Remove:", cola.remove())
-cola.mostrar_cola()
+total = 100  
 
-print("¿Está vacía?", cola.is_empty())
-print("¿Está llena?", cola.is_full())
-print("Tamaño:", cola.size())
+#CRIBA
+criba = [True] * (total + 1)
+criba[0] = criba[1] = False 
+
+for i in range(2, int(total ** 0.5) + 1):
+    if criba[i]:  
+        for j in range(i * i, total + 1, i):
+            criba[j] = False
+
+
+
+while not A.isEmpty():
+    e = A.remove()
+    if criba[e]:  
+        B.insert(e)
+    else:
+        C.insert(e)
+
+print("B... PRIMOS")
+while not B.isEmpty():
+    print(B.remove())
+
+print("C... NO PRIMOS")
+while not C.isEmpty():
+    print(C.remove())
