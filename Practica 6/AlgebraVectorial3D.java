@@ -39,8 +39,8 @@ public class AlgebraVectorial3D {
         return "(" + x + ", " + y + ", " + z + ")";
     }
     public static void main(String[] args) {
-        AlgebraVectorial3D a = new AlgebraVectorial3D(3, -2, 5);
-        AlgebraVectorial3D b = new AlgebraVectorial3D(1, 4, -3);
+        AlgebraVectorial3D a = new AlgebraVectorial3D(1, 2, 3);
+        AlgebraVectorial3D b = new AlgebraVectorial3D(-2, 1, 0);
 
         System.out.println("Suma: " + a.suma(b));
         System.out.println("Multiplicación por escalar (2): " + a.multiplicarEscalar(2));

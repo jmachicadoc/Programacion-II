@@ -27,8 +27,8 @@ public class AlgebraVectorial {
     }
 
     public static void main(String[] args) {
-        AlgebraVectorial v1 = new AlgebraVectorial(3, 4);
-        AlgebraVectorial v2 = new AlgebraVectorial(-4, 3);
+        AlgebraVectorial v1 = new AlgebraVectorial(2, 5);
+        AlgebraVectorial v2 = new AlgebraVectorial(4, 10);
         System.out.println("Son perpendiculares? " + v1.esPerpendicular(v2));
         System.out.println("Son paralelas? " + v1.esParalelo(v2));
         AlgebraVectorial proyeccion = v1.proyeccionSobre(v2);
