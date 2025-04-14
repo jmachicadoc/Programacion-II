@@ -2,7 +2,7 @@ package Practica7.Ej2;
 import java.util.Scanner;
 import java.util.Random;
 class JuegoAdivinaNumero extends Juego {
-    protected int numeroAAdivinar;
+    private int numeroAAdivinar;
     private Scanner scanner = new Scanner(System.in);
     private Random random = new Random();
     public JuegoAdivinaNumero(int numeroDeVidas) {

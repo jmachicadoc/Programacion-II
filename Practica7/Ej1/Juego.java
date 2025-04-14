@@ -1,7 +1,7 @@
 package Practica7.Ej1;
 public class Juego {
-    protected int numeroDeVidas;
-    protected int record;
+    private int numeroDeVidas;
+    private int record;
     public Juego(int numeroDeVidas) {
         this.numeroDeVidas = numeroDeVidas;
         this.record = 0;
