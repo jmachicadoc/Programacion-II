@@ -8,4 +8,8 @@ public class Main {
         d.mostrar();
     }
 }
-//Consideremos que en java no es posible directamente la herencia multiple en si, se puede usar interfaces pero con el problema dado no es posible ya que tiene constructores, y no puede tener atributos de instancia.
+/*Consideremos que en java no es posible 
+directamente la herencia multiple en si, 
+se puede usar interfaces pero con el problema 
+dado no es posible ya que tiene constructores, 
+y no puede tener atributos de instancia. */
