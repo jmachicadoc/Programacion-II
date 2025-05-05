@@ -20,7 +20,6 @@ class Boleto(ABC):
     def set_precio(self, precio):
         self.__precio = precio
 
-
 class Palco(Boleto):
     def __init__(self, numero_boleto):
         super().__init__(numero_boleto)
@@ -28,7 +27,6 @@ class Palco(Boleto):
 
     def mostrar_informacion(self):
         return f"Numero: {self.get_numero_boleto()}, Precio: {self.get_precio()}"
-
 
 class Platea(Boleto):
     def __init__(self, numero_boleto, dias_anticipacion):
@@ -40,7 +38,6 @@ class Platea(Boleto):
 
     def mostrar_informacion(self):
         return f"Numero: {self.get_numero_boleto()}, Precio: {self.get_precio()}"
-
 
 class Galeria(Platea):
     def __init__(self, numero_boleto, dias_anticipacion):

@@ -97,7 +97,7 @@ def mostrar_figuras():
 # Interfaz Gráfica
 
 ventana = tk.Tk()
-ventana.title("Figuras Coloreadas")
+ventana.title("Coloreado")
 ventana.geometry("500x500")
 ventana.resizable(False, False)
 
